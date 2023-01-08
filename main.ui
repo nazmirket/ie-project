@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>YatasTahmilemeUygulamasi</class>
+ <widget class="QMainWindow" name="YatasTahmilemeUygulamasi">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>409</width>
+    <height>388</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Sipraiş Tahminleme</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>brandmin.png</normaloff>brandmin.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="btn_forecast">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>170</y>
+      <width>331</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Tahminleme Yap</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_update">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>230</y>
+      <width>331</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="text">
+     <string>Gerçekleşen Adetleri Tahmin Dosyasında Güncelle</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_segment">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>290</y>
+      <width>331</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Tahmin Verileri Segment Düzenle</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_upload">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>110</y>
+      <width>331</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="accessibleName">
+     <string>btn-upload</string>
+    </property>
+    <property name="text">
+     <string>Excel Dosyasını Yükle</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>30</y>
+      <width>200</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="pixmap">
+     <pixmap>brand.png</pixmap>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
