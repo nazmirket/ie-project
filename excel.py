@@ -5,8 +5,8 @@ from forecast import *
 def clean():
     df = pd.read_excel('resources/data.xlsx', sheet_name=[0])[0]
     abc = abc_analysis(df)
-    writeData(abc.values, ['sum', 'category'], 'output/abc.xlsx', df)
-    df_abc = pd.read_excel('output/abc.xlsx', sheet_name=[0])[0]
+    writeData(abc.values, ['sum', 'category'], 'output/ABC_Analysis.xlsx', df)
+    df_abc = pd.read_excel('output/ABC_Analysis.xlsx', sheet_name=[0])[0]
     df_abc = df_abc[(df_abc['category'] == 'A')]
     df_abc = df_abc.drop(columns=['category', 'sum', 'Unnamed: 0'])
     df_abc.to_excel('resources/clean.xlsx')

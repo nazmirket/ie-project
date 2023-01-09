@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>409</width>
-    <height>388</height>
+    <height>421</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,7 +22,7 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>170</y>
+      <y>270</y>
       <width>331</width>
       <height>51</height>
      </rect>
@@ -35,7 +35,7 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>230</y>
+      <y>330</y>
       <width>331</width>
       <height>51</height>
      </rect>
@@ -48,19 +48,6 @@
     </property>
     <property name="text">
      <string>Gerçekleşen Adetleri Tahmin Dosyasında Güncelle</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btn_segment">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>290</y>
-      <width>331</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Tahmin Verileri Segment Düzenle</string>
     </property>
    </widget>
    <widget class="QPushButton" name="btn_upload">
@@ -92,9 +79,102 @@
      <pixmap>brand.png</pixmap>
     </property>
    </widget>
+   <widget class="QRadioButton" name="r_mvg">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>170</y>
+      <width>301</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Moving Averages</string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>26</width>
+      <height>26</height>
+     </size>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">buttonGroup</string>
+    </attribute>
+   </widget>
+   <widget class="QRadioButton" name="r_exp">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>200</y>
+      <width>301</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Exponential Smoothing</string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>26</width>
+      <height>26</height>
+     </size>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">buttonGroup</string>
+    </attribute>
+   </widget>
+   <widget class="QRadioButton" name="r_reg">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>230</y>
+      <width>301</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Regression Analysis</string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>26</width>
+      <height>26</height>
+     </size>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">buttonGroup</string>
+    </attribute>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
+ <buttongroups>
+  <buttongroup name="buttonGroup"/>
+ </buttongroups>
 </ui>

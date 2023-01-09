@@ -12,5 +12,13 @@ def btn_upload_click_listener(window, self):
     self.setStyleSheet('QPushButton {background-color: green; color: white;}')
     init()
 
-def btn_forecast_click_listener(window, self):
-    forecast()
+def btn_forecast_click_listener(window, self, mvg, exp, reg):
+    if(mvg):
+        forecast('mvg')
+    elif(exp):
+        forecast('exp')
+    elif(reg):
+        forecast('reg')
+
+
+        

@@ -1,6 +1,6 @@
 import numpy as np
 from sklearn.linear_model import LinearRegression
-from sklearn.cluster import KMeans
+from sklearn.metrics import mean_absolute_percentage_error
 
 from abc_analysis import abc_analysis as ABC
 
@@ -8,7 +8,7 @@ def moving_avg(data, n):
   result = []
 
   for rIndex in range(0, len(data)):
-      row = data[rIndex][3:]
+      row = data[rIndex][2:]
       
       avgs = []
       i = 0
@@ -19,10 +19,9 @@ def moving_avg(data, n):
         avg = sum / n
         avgs.append(avg)
         i += 1
-
+      
       result.append(avgs)
   return result
-
 
 def exp_smoothing(data, a):
   result = []
@@ -44,13 +43,13 @@ def exp_smoothing(data, a):
 def reg_analysis(data):
   result = []
 
-  for rIndex in range(0, len(data)):
+  for rIndex in range(0, len(data) - 1):
     row = data[rIndex][2:]
       
     x = []
     y = []
 
-    for i in range(1,12):
+    for i in range(1, len(row) + 1):
       x.append([i])
       y.append([row[i-1]])        
 
@@ -63,8 +62,9 @@ def reg_analysis(data):
 
 
 def abc_analysis(df):
-    subframe = df.iloc[:, 2:14]
-    subframe['sum'] = df.iloc[:, 2:14].sum(axis=1)
+    print(df)
+    subframe = df.iloc[:,2:]
+    subframe['sum'] = df.iloc[:, 2:].sum(axis=1)
     result = ABC(subframe['sum'])
 
     subframe['category'] = np.empty(len(subframe))
@@ -80,8 +80,23 @@ def abc_analysis(df):
     
     return subframe
 
-def mape():
-  return
+
+
+def original(data, l):
+  result = []
+  for rIndex in range(0, len(data)):
+      result.append(data[rIndex][2:(l+2)]) 
+  return result
+
+
+def mape(data, frc):
+  org = original(data, 4)
+  errs = []
+  for i in range(0,len(frc)):
+    o = org[i]
+    f = frc[i][0:4]
+    errs.append(mean_absolute_percentage_error(o, f))
+  return errs
 
 
 
